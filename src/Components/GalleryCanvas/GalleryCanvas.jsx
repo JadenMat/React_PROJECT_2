@@ -1,4 +1,5 @@
 import React from "react";
+import './GalleryCanvas.css';
 
 export default function GalleryCanvas({ placedPieces }) {
   return (

@@ -1,3 +1,6 @@
+import React from 'react';
+import './ImagePalette.css';
+
 export default function ImagePalette({ pieces, onAdd }) {
     return (
       <div className="palette">
