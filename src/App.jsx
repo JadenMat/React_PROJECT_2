@@ -6,9 +6,13 @@ function App() {
   const [placedPieces, setPlacedPieces] = useState([]);
 
   const availablePieces = [
-    { id: 1, src: "/src/images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight.png" },
-    { id: 2, src: "/src/images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight2.png" },
-    { id: 3, src: "/src/images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight3.png" }
+    { id: 1, src: "./images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight.png" },
+    { id: 2, src: "./images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight2.png" },
+    { id: 3, src: "./images/album_pieces/speakin_my_piece/Pieces__MiddlePhotoBox.png" },
+    { id: 4, src: "./images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight3.png" },
+    { id: 5, src: "./images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight4.png" },
+    { id: 6, src: "./images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight5.png" },
+    { id: 7, src: "./images/album_pieces/speakin_my_piece/Pieces__Blackbox_FarRight6.png" },
   ];
 
   function handleAdd(piece) {

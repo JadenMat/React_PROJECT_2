@@ -1,0 +1,15 @@
+.canvas {
+    width: 400px;
+    height: 400px;
+    background: #eee;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .piece {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    animation: fadeIn 0.3s ease;
+  }  
