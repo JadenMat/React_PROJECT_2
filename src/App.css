@@ -3,18 +3,29 @@
   height: 100vh;
   width: 100vw;
   grid-template-areas: 
-  "content content content"
+  "header header header"
   "canvas canvas canvas"
   "footer footer footer"  ;
 }
 
-.canvas {
+header{
+  grid-area: header;
+  width: 100vw;
+  height: 20vh;
+  padding: 10px;
+}
+
+canvas{
   grid-area: canvas;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  border: 3px solid blue;
-  position: relative;
-  overflow: hidden;
+  width: 100vw;
+  height:100vh;
+
+}
+
+footer{
+  grid-area: footer;
+}
+
+h1 {
+  color: orange;
 }

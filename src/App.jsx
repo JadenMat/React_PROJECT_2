@@ -27,7 +27,9 @@ function App() {
 
   return (
     <div className="grid-container">
-      <div className="header"></div>
+      <div className="header">
+        <h1>Speakin' My Piece - Interactive Album Art</h1>
+      </div>
       <div className="canvas">
         <GalleryCanvas placedPieces={placedPieces} />
         <ImagePalette pieces={availablePieces} onAdd={handleAdd} />

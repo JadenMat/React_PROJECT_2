@@ -1,15 +1,15 @@
 .canvas {
     width: 400px;
     height: 400px;
-    background: #eee;
-    border: 3px solid blue;
-    position: relative;
+    background: whitesmoke;
+    border: 3px solid black;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
   }
   
   .piece {
     position: absolute;
-    width: 100%;
+    width: 20%;
     height: auto;
-    animation: fadeIn 0.3s ease;
   }  
