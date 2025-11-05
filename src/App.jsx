@@ -37,7 +37,8 @@ function App() {
       <div className="header">
         <h1>Speakin' My Piece - Interactive Album Cover</h1>
       </div>
-      <div className='canvas'>
+      <div className='canvas-container'>
+        <GalleryCanvas images={images} startingPositions={startingPositions} />
       </div>
       <div className="footer">
         <p>Jaden Mathews - CT Lab Assignment #3 - 2025</p>
