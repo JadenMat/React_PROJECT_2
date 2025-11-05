@@ -39,7 +39,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
           const volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
 
           // ✅ Now reads the *current* index & ready state
-          if (volume > 40 && readyRef.current && indexRef.current < images.length) {
+          if (volume > 70 && readyRef.current && indexRef.current < images.length) {
             addNextImage();
           }
 
@@ -66,9 +66,9 @@ export default function GalleryCanvas({ images, startingPositions }) {
 
     setIndex(prev => prev + 1);
 
-    // 🕒 1 second cooldown
+    //cooldown
     setReadyToAdd(false);
-    setTimeout(() => setReadyToAdd(true), 250);
+    setTimeout(() => setReadyToAdd(true), 500);
   }
 
   function resetCanvas() {
@@ -84,7 +84,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
           <img
             key={piece.id}
             src={piece.src}
-            className="piece"
+            className={`piece piece-${piece.id}`}
             style={{ left: piece.x, top: piece.y }}
           />
         ))}

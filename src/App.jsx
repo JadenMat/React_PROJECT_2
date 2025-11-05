@@ -18,13 +18,14 @@ function App() {
   ];
 
   const startingPositions = [
-    { x: 60, y: 40 },
+    { x: 50, y: 0 },
     { x: 200, y: 40 },
-    { x: 40, y: 200 },
+    { x: 90, y: 40 },
     { x: 200, y: 200 },
     { x: 100, y: 100 },
     { x: 260, y: 100 },
     { x: 100, y: 260 },
+
     { x: 260, y: 260 },
     { x: 120, y: 350 },
     { x: 300, y: 350 },
@@ -35,7 +36,7 @@ function App() {
   return (
     <div className="grid-container">
       <div className="header">
-        <h1>Speakin' My Piece - Interactive Album Cover</h1>
+        <h1>Test - Interactive Album Cover</h1>
       </div>
       <div className='canvas-container'>
         <GalleryCanvas images={images} startingPositions={startingPositions} />

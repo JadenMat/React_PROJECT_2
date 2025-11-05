@@ -21,10 +21,9 @@
   grid-area: canvas;
   width: 100vw;
   height: 100vh;
-  display: flex;           /* ✅ allow centering */
-  justify-content: center; /* ✅ center horizontally */
-  align-items: center;     /* ✅ center vertically */
-  background: #f8f8f8;     /* helps you see the area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer{
@@ -35,4 +34,5 @@
 
 h1 {
   color: black;
+  font-family: 'Times New Roman', Times, serif;
 }
