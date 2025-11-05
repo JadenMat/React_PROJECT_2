@@ -8,24 +8,29 @@
   "footer footer footer"  ;
 }
 
-header{
+.header{
   grid-area: header;
+  position: relative;
+  text-align: center;
   width: 100vw;
-  height: 20vh;
-  padding: 10px;
+  height: 10vh;
+  padding: 15px;
 }
 
-canvas{
+.canvas{
+  align-items: center;
   grid-area: canvas;
   width: 100vw;
   height:100vh;
 
 }
 
-footer{
+.footer{
   grid-area: footer;
+  text-align: center;
+  color: gray;
 }
 
 h1 {
-  color: orange;
+  color: black;
 }
