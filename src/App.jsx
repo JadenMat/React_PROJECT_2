@@ -18,18 +18,18 @@ function App() {
   ];
 
   const startingPositions = [
-    { x: 270, y: 0, rotate: 0 }, // images[0] - First black box
-    { x: 200, y: 70, rotate: -2 }, // images[1] - Second black box
-    { x: 90, y: 40, rotate: 2 }, // images[2] - Middle photo box
-    { x: 200, y: 200, rotate: 0 }, // images[3] - Third black box
-    { x: 100, y: 100, rotate: 0 }, // images[4] - Fourth black box
-    { x: 260, y: 100, rotate: 0 }, // images[5] - Fifth black box
-    { x: 100, y: 260, rotate: 0 }, // images[6] - Sixth black box
+    { x: 230, y: 0, rotate: 0 }, // images[0] - First black box
+    { x: 160, y: 70, rotate: -2 }, // images[1] - Second black box
+    { x: 75, y: 20, rotate: 6 }, // images[2] - Middle photo box
+    { x: 10, y: -80, rotate: 0 }, // images[3] - Third black box
+    { x: -75, y: -10, rotate: 2 }, // images[4] - Fourth black box
+    { x: -155, y: -30, rotate: -2 }, // images[5] - Fifth black box
+    { x: -235, y: 30, rotate: -2 }, // images[6] - Sixth black box
 
-    { x: 260, y: 260, rotate: 0 }, // images[7] - "Speakin" text
-    { x: 120, y: 350, rotate: 0 }, // images[8] - "My Piece" text
-    { x: 300, y: 350, rotate: 0 }, // images[9] - "Horace Parlan Quintet" text
-    { x: 180, y: 420, rotate: 0 }, // images[10] - "-14" text
+    { x: 315, y: 350, rotate: 0 }, // images[7] - "Speakin" text
+    { x: 255, y: 385, rotate: 0 }, // images[8] - "My Piece" text
+    { x: 240, y: 420, rotate: 0 }, // images[9] - "Horace Parlan Quintet" text
+    { x: 0, y: 325, rotate: 0 }, // images[10] - "-14" text
     { x: 250, y: 450, rotate: 0 } // images[11] - Blue Note logo
   ];
 
