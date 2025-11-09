@@ -21,15 +21,16 @@
 
 /* Black boxes - make them larger */
 .piece-0 {
-  max-width: 450px;
+  max-width: 520px;
 }
 
 .piece-1 {
-  max-width: 180px;
+  max-width: 520px;
+  transform: rotate(-90deg);
 }
 
 .piece-2 {
-  max-width: 250px; /* Photo box */
+  max-width: 520px; /* Photo box */
 }
 
 .piece-3 {

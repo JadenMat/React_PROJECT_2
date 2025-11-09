@@ -18,8 +18,8 @@ function App() {
   ];
 
   const startingPositions = [
-    { x: 200, y: 20 }, // images[0] - First black box
-    { x: 200, y: 40 }, // images[1] - Second black box
+    { x: 270, y: 0 }, // images[0] - First black box
+    { x: 205, y: 70 }, // images[1] - Second black box
     { x: 90, y: 40 }, // images[2] - Middle photo box
     { x: 200, y: 200 }, // images[3] - Third black box
     { x: 100, y: 100 }, // images[4] - Fourth black box
