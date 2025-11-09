@@ -1,91 +1,85 @@
 .canvas {
-  position: relative;
+  position: relative; /* Parent for absolute children */
   width: 600px;
   height: 600px;
-  border: 0.25px solid #000;
-  margin: 0 auto;
-  overflow: hidden;
+  border: 2px solid #000;
   background: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 @keyframes pulse {
-  0% {transform: scale(0.6); }
-  50% {transform: scale(1.2);}
-  100% {transform: scale(1);}
-
+  0% { transform: scale(0.6); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 .piece {
-  position: absolute;
-  max-width: 400px;
+  position: absolute; /* CRITICAL: Changed from relative to absolute */
   animation: pulse 0.5s ease-out forwards;
 }
 
+/* Black boxes - make them larger */
 .piece-0 {
-  position: absolute;
-  max-width: 600px;
+  max-width: 450px;
 }
 
 .piece-1 {
-  position: absolute;
-  max-width: 600px;
+  max-width: 180px;
 }
 
 .piece-2 {
-  position: absolute;
-  max-width: 600px;
+  max-width: 250px; /* Photo box */
 }
 
 .piece-3 {
-  position: absolute;
-  max-width: 600px;
+  max-width: 220px;
 }
 
 .piece-4 {
-  position: absolute;
-  max-width: 600px;
+  max-width: 200px;
 }
 
 .piece-5 {
-  position: absolute;
-  max-width: 600px;
+  max-width: 190px;
 }
 
 .piece-6 {
-  position: absolute;
-  max-width: 600px;
+  max-width: 210px;
 }
 
+/* Text pieces - make them smaller */
 .piece-7 {
-  position: absolute;
-  max-width: 400px;
+  max-width: 300px; /* "speakin'" */
 }
 
 .piece-8 {
-  position: absolute;
-  max-width: 400px;
+  max-width: 280px; /* "my piece" */
 }
 
 .piece-9 {
-  position: absolute;
-  max-width: 400px;
+  max-width: 320px; /* "horace parlan quintet" */
 }
 
 .piece-10 {
-  position: absolute;
-  max-width: 400px;
+  max-width: 150px; /* Blue Note logo or number */
 }
 
 .piece-11 {
-  position: absolute;
-  max-width: 400px;
+  max-width: 180px; /* Blue Note logo */
 }
 
-.piece-12 {
-  position: absolute;
-  max-width: 400px;
+.reset-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-/* .reset-button {
-} */
+.reset-button:hover {
+  background-color: #555;
+}

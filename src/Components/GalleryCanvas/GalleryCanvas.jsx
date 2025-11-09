@@ -6,10 +6,11 @@ export default function GalleryCanvas({ images, startingPositions }) {
   const [index, setIndex] = useState(0);
   const [readyToAdd, setReadyToAdd] = useState(true);
 
-  // ✅ These refs allow audio loop to read real-time values
+  // These refs let the audio loop access current state values
   const indexRef = useRef(index);
   const readyRef = useRef(readyToAdd);
 
+  // Keep refs in sync with state
   useEffect(() => {
     indexRef.current = index;
   }, [index]);
@@ -18,7 +19,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
     readyRef.current = readyToAdd;
   }, [readyToAdd]);
 
-  // 🎤 Microphone setup runs once
+  // Setup microphone once on mount
   useEffect(() => {
     async function setupMic() {
       console.log("🎤 Requesting microphone...");
@@ -27,6 +28,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         const audioContext = new AudioContext();
         if (audioContext.state === "suspended") await audioContext.resume();
+        
         const source = audioContext.createMediaStreamSource(stream);
         const analyser = audioContext.createAnalyser();
         analyser.fftSize = 256;
@@ -38,7 +40,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
           analyser.getByteFrequencyData(dataArray);
           const volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
 
-          // ✅ Now reads the *current* index & ready state
+          // Check if volume threshold met and ready to add
           if (volume > 70 && readyRef.current && indexRef.current < images.length) {
             addNextImage();
           }
@@ -53,22 +55,34 @@ export default function GalleryCanvas({ images, startingPositions }) {
     }
 
     setupMic();
-  }, []); // ✅ Only run on mount!
+  }, []); // Empty array = run once on mount
 
   function addNextImage() {
+    // IMMEDIATELY set to false to prevent rapid-fire calls
+    setReadyToAdd(false);
+    readyRef.current = false; // Update ref immediately too!
+    
     const nextIndex = indexRef.current;
+    
+    // Safety check
+    if (nextIndex >= images.length) {
+      return;
+    }
+    
     const { x, y } = startingPositions[nextIndex];
-
+  
     setPlacedPieces(prev => [
       ...prev,
       { id: nextIndex, src: images[nextIndex], x, y }
     ]);
-
+  
     setIndex(prev => prev + 1);
-
-    //cooldown
-    setReadyToAdd(false);
-    setTimeout(() => setReadyToAdd(true), 500);
+  
+    // Cooldown before allowing next piece
+    setTimeout(() => {
+      setReadyToAdd(true);
+      readyRef.current = true; // Update ref when ready again
+    }, 500);
   }
 
   function resetCanvas() {
@@ -78,7 +92,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
   }
 
   return (
-    <div className="canvas-wrapper">
+    <>
       <div className="canvas">
         {placedPieces.map(piece => (
           <img
@@ -86,13 +100,14 @@ export default function GalleryCanvas({ images, startingPositions }) {
             src={piece.src}
             className={`piece piece-${piece.id}`}
             style={{ left: piece.x, top: piece.y }}
+            alt={`Album piece ${piece.id}`}
           />
         ))}
       </div>
-
+  
       <button onClick={resetCanvas} className="reset-button">
-        Reset
+        Reset Canvas
       </button>
-    </div>
+    </>
   );
 }

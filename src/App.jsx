@@ -18,19 +18,19 @@ function App() {
   ];
 
   const startingPositions = [
-    { x: 50, y: 0 },
-    { x: 200, y: 40 },
-    { x: 90, y: 40 },
-    { x: 200, y: 200 },
-    { x: 100, y: 100 },
-    { x: 260, y: 100 },
-    { x: 100, y: 260 },
+    { x: 200, y: 20 }, // images[0] - First black box
+    { x: 200, y: 40 }, // images[1] - Second black box
+    { x: 90, y: 40 }, // images[2] - Middle photo box
+    { x: 200, y: 200 }, // images[3] - Third black box
+    { x: 100, y: 100 }, // images[4] - Fourth black box
+    { x: 260, y: 100 }, // images[5] - Fifth black box
+    { x: 100, y: 260 }, // images[6] - Sixth black box
 
-    { x: 260, y: 260 },
-    { x: 120, y: 350 },
-    { x: 300, y: 350 },
-    { x: 180, y: 420 },
-    { x: 250, y: 450 }
+    { x: 260, y: 260 }, // images[7] - "Speakin" text
+    { x: 120, y: 350 }, // images[8] - "My Piece" text
+    { x: 300, y: 350 }, // images[9] - "Horace Parlan Quintet" text
+    { x: 180, y: 420 }, // images[10] - "-14" text
+    { x: 250, y: 450 } // images[11] - Blue Note logo
   ];
 
   return (
@@ -40,6 +40,7 @@ function App() {
       </div>
       <div className='canvas-container'>
         <GalleryCanvas images={images} startingPositions={startingPositions} />
+        {/* <GalleryCanvas images={images} /> */}
       </div>
       <div className="footer">
         <p>Jaden Mathews - CT Lab Assignment #3 - 2025</p>
