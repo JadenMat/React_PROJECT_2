@@ -69,13 +69,13 @@ export default function GalleryCanvas({ images, startingPositions }) {
       return;
     }
     
-    const { x, y } = startingPositions[nextIndex];
-  
+    const { x, y, rotate } = startingPositions[nextIndex];
+
     setPlacedPieces(prev => [
       ...prev,
-      { id: nextIndex, src: images[nextIndex], x, y }
+      { id: nextIndex, src: images[nextIndex], x, y, rotate }
     ]);
-  
+
     setIndex(prev => prev + 1);
   
     // Cooldown before allowing next piece
@@ -96,12 +96,16 @@ export default function GalleryCanvas({ images, startingPositions }) {
       <div className="canvas">
         {placedPieces.map(piece => (
           <img
-            key={piece.id}
-            src={piece.src}
-            className={`piece piece-${piece.id}`}
-            style={{ left: piece.x, top: piece.y }}
-            alt={`Album piece ${piece.id}`}
-          />
+          key={piece.id}
+          src={piece.src}
+          className={`piece piece-${piece.id}`}
+          style={{ 
+            left: piece.x, 
+            top: piece.y,
+            '--rotation': `${piece.rotate}deg`  // CHANGED: from transform to CSS variable
+          }}
+          alt={`Album piece ${piece.id}`}
+        />
         ))}
       </div>
   
