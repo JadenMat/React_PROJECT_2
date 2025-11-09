@@ -29,8 +29,8 @@ function App() {
     { x: 315, y: 350, rotate: 0 }, // images[7] - "Speakin" text
     { x: 255, y: 385, rotate: 0 }, // images[8] - "My Piece" text
     { x: 240, y: 420, rotate: 0 }, // images[9] - "Horace Parlan Quintet" text
-    { x: 0, y: 325, rotate: 0 }, // images[10] - "-14" text
-    { x: 250, y: 450, rotate: 0 } // images[11] - Blue Note logo
+    { x: 25, y: 285, rotate: 0 }, // images[10] - "-14" text
+    { x: -100, y: -105, rotate: 0 } // images[11] - Blue Note logo
   ];
 
   return (
