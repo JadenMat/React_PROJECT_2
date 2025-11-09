@@ -6,7 +6,7 @@
     "header header header"
     "canvas canvas canvas"
     "footer footer footer";
-  grid-template-rows: auto 1fr auto; /* header/footer natural height, canvas fills remaining */
+  grid-template-rows: auto 1fr auto;
 }
 
 .header {
@@ -16,14 +16,13 @@
   background-color: #EDE8D0;
 }
 
-/* FIX: Changed from .convas-container to .canvas-container */
 .canvas-container {
   grid-area: canvas;
   display: flex;
-  flex-direction: column; /* Stack canvas and button vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Space between canvas and button */
+  gap: 20px;
   padding: 20px;
   width: 100%;
   background-color: #EDE8D0;

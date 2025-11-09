@@ -40,7 +40,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
           analyser.getByteFrequencyData(dataArray);
           const volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
 
-          // Check if volume threshold met and ready to add
+          // VOLUME THRESHOLD
           if (volume > 70 && readyRef.current && indexRef.current < images.length) {
             addNextImage();
           }

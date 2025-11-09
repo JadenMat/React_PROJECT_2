@@ -22,7 +22,7 @@
   100% { transform: scale(1) rotate(var(--rotation)); }
 }
 
-/* Black boxes - make them larger */
+/* top boxes! */
 .piece-0 {
   max-width: 575px;
 }
@@ -53,15 +53,15 @@
 
 /* Text pieces*/
 .piece-7 {
-  max-width: 300px; /* "speakin'" */
+  max-width: 300px; /* speakin' */
 }
 
 .piece-8 {
-  max-width: 300px; /* "my piece" */
+  max-width: 300px; /* my piece */
 }
 
 .piece-9 {
-  max-width: 300px; /* "horace parlan quintet" */
+  max-width: 300px; /* horace parlan quintet */
 }
 
 .piece-10 {
