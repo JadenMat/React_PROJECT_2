@@ -2,7 +2,7 @@
   position: relative; /* Parent for absolute children */
   width: 600px;
   height: 600px;
-  border: 0.25px solid #000;
+  /* border: 0.25px solid #000; */
   background: offwhite;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;

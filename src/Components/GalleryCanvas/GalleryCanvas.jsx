@@ -41,7 +41,7 @@ export default function GalleryCanvas({ images, startingPositions }) {
           const volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
 
           // VOLUME THRESHOLD
-          if (volume > 70 && readyRef.current && indexRef.current < images.length) {
+          if (volume > 200 && readyRef.current && indexRef.current < images.length) {
             addNextImage();
           }
 
